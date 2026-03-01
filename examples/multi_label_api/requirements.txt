@@ -1,0 +1,9 @@
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+torch>=2.1.0
+torchvision>=0.16.0
+opencv-python==4.8.1.78
+pillow==10.1.0
+shapely==2.0.2
+pydantic==2.5.0
+numpy>=1.24.3,<2.0.0
