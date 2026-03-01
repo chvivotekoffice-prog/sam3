@@ -114,6 +114,41 @@ for label in labels:
 
 The server will start on `http://localhost:5588`
 
+## Edge Deployment
+
+For production and edge deployment, we provide ONNX export and quantization tools:
+
+### Quick Start - ONNX Export
+```bash
+# Export model to ONNX format
+python export_to_onnx.py --output sam3_optimized.onnx --device cuda
+
+# Verify ONNX model
+python export_to_onnx.py --mode verify
+
+# Benchmark performance
+python export_to_onnx.py --mode benchmark --image test.jpg
+```
+
+### Quantization Options
+```bash
+# FP16 quantization (50% size reduction, minimal accuracy loss)
+python quantize_model.py --mode fp16
+
+# INT8 quantization (75% size reduction, for CPU devices)
+python quantize_model.py --mode int8
+
+# Compare all formats
+python quantize_model.py --mode compare
+```
+
+### Deployment Platforms
+- **ONNX Runtime**: Cross-platform, 1.2-2x faster
+- **TensorRT**: NVIDIA GPUs, 2-3x faster
+- **OpenVINO**: Intel CPUs, optimized performance
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment guide.
+
 ## API Usage
 
 ### Endpoint: `POST /predict`

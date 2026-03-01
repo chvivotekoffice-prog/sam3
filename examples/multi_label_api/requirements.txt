@@ -7,3 +7,12 @@ pillow==10.1.0
 shapely==2.0.2
 pydantic==2.5.0
 numpy>=1.24.3,<2.0.0
+
+# ONNX deployment (optional)
+onnx>=1.15.0
+onnxruntime>=1.16.0
+# onnxruntime-gpu>=1.16.0  # Uncomment for GPU support
+
+# Model optimization (optional)
+# tensorrt>=8.6.0  # NVIDIA GPUs only
+# openvino-dev>=2023.0  # Intel optimization

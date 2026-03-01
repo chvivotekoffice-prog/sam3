@@ -29,6 +29,16 @@ wheels/
 *.ckpt
 *.safetensors
 
+# ONNX models
+*.onnx
+*.engine
+quantized_models/
+models/
+
+# TensorRT
+*.plan
+*.trt
+
 # Test images
 *.jpg
 *.jpeg
